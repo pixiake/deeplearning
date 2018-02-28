@@ -8,3 +8,9 @@ print("Testing data size: " , mnist.test.num_examples)
 
 print("Example training data: " , mnist.train.images[0])
 print("Example training data label: " , mnist.train.labels[0])
+
+batch_size = 100
+xs ,ys = mnist.train.next_batch(batch_size)
+
+print("X shape: " , xs.shape)
+print("Y shape: " , ys.shape)
